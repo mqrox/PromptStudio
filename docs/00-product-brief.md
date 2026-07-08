@@ -33,6 +33,8 @@ PromptStudio の本質は、プロンプトを書くツールではない。
 
 仕事でクリエイティブ制作に関わる生成AIプロンプトを考えるときは、まず PromptStudio を使う。PromptStudio は、公式ガイドライン、社内検証で改善されたskill、過去案件の成功/失敗、入力画像や入力動画の利用情報を踏まえて、意図とモデルに合うプロンプト作成を支援する。
 
+初期の実行基盤としては、Google Antigravity / Antigravity IDE を重視する。Googleアカウントで始めやすく、個人向け無料プランから検証でき、Gemini系のマルチモーダル理解、Projects、Skills、Artifacts、agent実行の考え方が PromptStudio の設計と噛み合うためである。ただし、Antigravity専用に固定せず、skill / knowledge / artifact は独立した資産として扱う。
+
 ## 対象ユーザー
 
 ### 制作スタッフ

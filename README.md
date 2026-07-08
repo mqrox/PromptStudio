@@ -292,7 +292,7 @@ PromptStudio は、CG / VFX に限定したツールではありません。
 
 ユーザーは、ChatGPTに近い操作感で相談できます。ただし、PromptStudio は汎用チャットではありません。会社のskill、knowledge、workspace、保存先フォルダーを扱い、制作現場で再利用・レビューできる形にします。
 
-裏側では、Antigravity 2.0 IDE をローカル実行エンジンとして使う構成を目指します。
+裏側では、Google Antigravity / Antigravity IDE をローカル実行・agent基盤として使う構成を目指します。
 
 ```text
 Chrome Extension
@@ -301,10 +301,35 @@ Chrome Extension
     -> Skills
     -> Knowledge
     -> Artifacts
-    -> Antigravity 2.0 IDE
+    -> Google Antigravity / Antigravity IDE
 ```
 
 Chrome拡張は、対話UXと設定入力に集中します。任意フォルダーへの保存やローカルworkspace操作は、Chrome拡張から直接行わず、ローカルブリッジ経由にします。
+
+## なぜ Antigravity なのか
+
+PromptStudio では、初期のローカル実行・agent基盤として Google Antigravity / Antigravity IDE を重視します。
+
+理由は、単に「AI IDEだから」ではありません。PromptStudio がやりたいことは、skill、knowledge、workspace、保存物、レビューをつなぎ、各クリエイターの前提条件を揃えることです。そのためには、チャットだけではなく、ローカルファイル、プロジェクト単位の設定、agent、artifact、ブラウザ検証、将来の外部ツール連携を扱える実行基盤が必要です。
+
+Antigravity を選ぶ理由。
+
+- Google の公式プロダクトとして、業界導入時の安心感と説明しやすさがある
+- Googleアカウントで始められ、個人向けには無料プランが用意されている
+- Google AI Pro / Ultra などの有料プランで、より高い利用上限や優先アクセスへ拡張できる
+- Gemini 3.5 Flash など、Googleの上位モデルと近い位置で使える
+- Gemini は画像・動画・音声・PDFなどのマルチモーダル入力に対応しており、クリエイティブ制作の文脈と相性が良い
+- 動画理解では、映像と音声の両方から内容を理解し、説明や質問応答、タイムスタンプ参照ができる
+- Antigravity の Projects / Skills / Artifacts の考え方が、PromptStudio の workspace / skill / review artifact 設計と噛み合う
+- agent が editor、terminal、browser をまたいで作業できるため、保存、検証、レビュー、改善の流れを自動化しやすい
+- MCPやGoogle製開発ツール連携により、将来的にknowledge、Drive、Workspace、社内ツールへ拡張しやすい
+- Windows / macOS / Linux で使えるため、制作現場のPC環境に合わせやすい
+
+ただし、PromptStudio 全体を Antigravity 専用に固定しません。Antigravity は現時点で有力な実行基盤ですが、保存形式、skill、knowledge、レビューPDCAは独立した資産として設計します。
+
+現時点の注意点もあります。Antigravity の利用上限や提供条件はプランによって変わり、容量は常に保証されるものではありません。また、Googleのヘルプでは Antigravity のプロンプトと指示は英語のみ対応とされています。PromptStudio では、日本語の制作相談を英語プロンプトやモデル別指示へ変換する層を用意する前提で設計します。
+
+詳細は [docs/09-why-antigravity.md](docs/09-why-antigravity.md) にまとめています。
 
 ## MVPで作るもの
 
@@ -366,19 +391,20 @@ artifacts/
 - [docs/00-index.md](docs/00-index.md): ドキュメント入口
 - [docs/00-product-brief.md](docs/00-product-brief.md): プロダクトの本質と対象ユーザー
 - [docs/01-mvp-scope.md](docs/01-mvp-scope.md): 最初に作る範囲
-- [docs/02-architecture-principles.md](docs/02-architecture-principles.md): Chrome拡張、ローカルブリッジ、Antigravity IDE の責務分離
+- [docs/02-architecture-principles.md](docs/02-architecture-principles.md): Chrome拡張、ローカルブリッジ、Antigravity の責務分離
 - [docs/03-prompt-skill-pdca.md](docs/03-prompt-skill-pdca.md): skill / knowledge / 保存物 / レビュー改善サイクル
 - [docs/04-implementation-roadmap.md](docs/04-implementation-roadmap.md): 実装ロードマップ
 - [docs/05-repo-governance.md](docs/05-repo-governance.md): リポジトリ運用ルール
 - [docs/06-decision-log.md](docs/06-decision-log.md): 重要な意思決定ログ
 - [docs/07-business-pitch.md](docs/07-business-pitch.md): ビジネスピッチ要約
 - [docs/08-model-skill-registry.md](docs/08-model-skill-registry.md): モデル別skill設計
+- [docs/09-why-antigravity.md](docs/09-why-antigravity.md): Antigravityを使う理由と確認済み事実
 
 ## 現時点の設計方針
 
 - Chrome拡張はUXと設定入力に集中する
 - 任意フォルダー保存やローカルworkspace操作は、Chrome拡張から直接ではなく、ローカルブリッジ経由にする
-- Antigravity 2.0 IDE への依存は抽象化し、将来ほかの実行エンジンにも差し替えられるようにする
+- Google Antigravity / Antigravity IDE への依存は抽象化し、将来ほかの実行エンジンにも差し替えられるようにする
 - skill は「プロンプトの作法」だけでなく、モデル別制約、制作レビュー観点、案件コンテキストを含める
 - knowledge は、会社・案件・ブランド・制作ルールの共有文脈として扱う
 - モデル別skillは、公式ガイドラインと社内検証で改善された知見の両方を扱う

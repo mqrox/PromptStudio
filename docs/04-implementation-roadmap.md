@@ -41,12 +41,14 @@
 - レビュー結果からskill改善へ戻す手順を作る
 - 成功 / 失敗、入力画像 / 入力動画、参照素材、生成結果を蓄積する
 
-## Phase 5: Antigravity 2.0 IDE連携
+## Phase 5: Google Antigravity / Antigravity IDE連携
 
-- Antigravity 2.0 IDE で扱えるworkspace構造を確認する
+- Antigravity / Antigravity IDE で扱えるworkspace構造を確認する
+- Googleアカウント、無料プラン、利用上限、有料プラン、言語制限を確認する
 - 実行エンジン境界を設計する
 - Chrome拡張からローカルブリッジ経由で実行依頼できるようにする
 - Antigravityに依存しすぎないインターフェースを保つ
+- 日本語の制作相談を、Antigravity / Gemini 向けの英語指示やモデル別プロンプトへ変換する層を設計する
 
 ## Phase 6: ユーザー識別とチーム運用
 

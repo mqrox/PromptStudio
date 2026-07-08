@@ -58,4 +58,4 @@ examples/
 - 管理者レビューとskill改善につながるか
 - Chrome拡張に過剰なローカル権限を持たせていないか
 - 保存形式が後から検索、レビュー、再利用しやすいか
-- Antigravity 2.0 IDE 以外にも将来差し替えられる余地があるか
+- Google Antigravity / Antigravity IDE 以外にも将来差し替えられる余地があるか
