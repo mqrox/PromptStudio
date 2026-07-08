@@ -11,10 +11,11 @@
 5. [04-implementation-roadmap.md](04-implementation-roadmap.md)
 6. [05-repo-governance.md](05-repo-governance.md)
 7. [06-decision-log.md](06-decision-log.md)
+8. [07-business-pitch.md](07-business-pitch.md)
 
 ## 一文で言うと
 
-PromptStudio は、VFX / CG 制作会社の生成AIプロンプト作成を、個人技から会社の共通知識と改善サイクルへ変えるためのワークベンチです。
+PromptStudio は、広告、映像、デザイン、CG / VFX、ゲーム、アニメ、ブランド制作、SNSコンテンツなど、クリエイティブ制作における生成AIプロンプト作成を、個人技から会社の共通知識と改善サイクルへ変えるためのワークベンチです。
 
 ## 現時点で重要な判断
 

@@ -4,7 +4,7 @@
 
 ### 決定
 
-PromptStudio を、VFX / CG 制作会社向けの生成AIプロンプト運用基盤として定義する。
+PromptStudio を、広告、映像、デザイン、CG / VFX、ゲーム、アニメ、ブランド制作、SNSコンテンツなど、クリエイティブ制作業界向けの生成AIプロンプト運用基盤として定義する。
 
 最初のUXは Chrome拡張のチャットUIとし、ローカルworkspace、skill、knowledge、成果物保存はローカルブリッジを経由して扱う。
 
