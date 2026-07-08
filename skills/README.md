@@ -26,7 +26,7 @@ skill は単なるテンプレートではなく、制作意図を生成AIが扱
 
 ## 管理者用skill
 
-現場スタッフ用のprompt skillとは別に、管理者が蓄積artifactを分析してPDCAを回すためのskillも置きます。
+現場スタッフ用のprompt skillとは別に、管理者が蓄積artifactを分析して改善を進めるためのskillも置きます。
 
 初期候補。
 
