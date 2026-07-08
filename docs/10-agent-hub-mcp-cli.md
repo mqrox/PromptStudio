@@ -4,7 +4,7 @@
 
 PromptStudio は、最初はChrome拡張として実装する。
 
-ただし、長期的な本体はChrome拡張ではない。PromptStudio の本体は、生成AIプロンプトを考えるための前提条件、skill、knowledge、artifact、レビューPDCAを提供する共通ハブである。
+ただし、長期的な本体はChrome拡張ではない。PromptStudio の本体は、生成AIプロンプトを考えるための前提条件、skill、knowledge、artifact、レビュー改善サイクルを提供する共通ハブである。
 
 将来的には、ChatGPT系環境、Codex、Claude Code、Gemini / Antigravity、その他AIエージェントや社内ツールから呼べるようにする。
 
