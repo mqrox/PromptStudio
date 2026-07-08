@@ -1,4 +1,4 @@
-# Prompt Skill PDCA
+# Prompt Skill 改善サイクル
 
 ## なぜ保存するのか
 
@@ -114,23 +114,23 @@ artifacts/
 
 管理者がレビューし、skill改善へ戻すためのメモを記録する。
 
-## PDCA
+## 改善サイクル
 
-### Plan
+### 1. 用意する
 
 会社として使うskillとknowledgeを用意する。
 
-### Do
+### 2. 使って作る
 
 制作スタッフがChrome拡張で相談し、目的とモデルに応じたskillを使い、プロンプトと副産物を保存する。
 
-### Check
+### 3. 見返す
 
 管理者が保存物をレビューし、品質、再現性、モデル適性、案件適合性、入力素材の妥当性、成功 / 失敗理由を確認する。
 
 蓄積が増えた段階では、Codex、Claude Code、Gemini / Antigravity などから呼べる管理者用skillで、複数artifactを横断分析する。
 
-### Act
+### 4. 直して次へ使う
 
 レビュー結果をskill / knowledgeへ反映し、次回以降の出力を改善する。
 
@@ -138,7 +138,7 @@ artifacts/
 
 ## 管理者用skill
 
-PromptStudio では、現場スタッフが使うプロンプト生成skillとは別に、管理者がPDCAを回すためのskillを用意する。
+PromptStudio では、現場スタッフが使うプロンプト生成skillとは別に、管理者が蓄積された成果物を見て、skill改善を進めるためのskillを用意する。
 
 現場スタッフ用skillは、制作意図を整理し、対象モデルに合ったprompt packageを作るためのもの。
 
