@@ -18,7 +18,7 @@ Chrome Extension / CLI / MCP Server / Local API
       -> Other agents and model tools
 ```
 
-Chrome拡張は最初のユーザー体験であり、最終的な本体ではない。長期的には PromptStudio Core を中心に置き、複数の呼び出し面から同じskill、knowledge、artifact保存、レビューPDCAを使えるようにする。
+Chrome拡張は最初のユーザー体験であり、最終的な本体ではない。長期的には PromptStudio Core を中心に置き、複数の呼び出し面から同じskill、knowledge、artifact保存、レビュー改善サイクルを使えるようにする。
 
 ## Chrome拡張の責務
 
