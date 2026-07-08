@@ -22,6 +22,13 @@
 - skill / knowledge の読み取りを実装する
 - workspaceパスの存在確認を行う
 
+## Phase 2.5: PromptStudio Core
+
+- Chrome拡張から切り離したCore APIを設計する
+- 意図整理、skill選択、knowledge参照、prompt package生成をCoreに集約する
+- Chrome拡張、CLI、MCP server、Local APIが同じCoreを呼べるようにする
+- prompt packageの共通スキーマを定義する
+
 ## Phase 3: プロンプト生成フロー
 
 - 画像生成向けの基本skillを作る
@@ -56,6 +63,20 @@
 - ユーザーIDを成果物に記録する
 - 管理者レビュー権限を設計する
 - 将来のGoogle Workspace / クラウド同期を検討する
+
+## Phase 7: CLI / MCP / agent hub
+
+- `promptstudio` CLIを用意する
+- MCP serverとして PromptStudio Core を公開する
+- Codex、Claude Code、Gemini / Antigravity、ChatGPT系環境から呼ぶ想定toolを定義する
+- agentが受け取るprompt package、metadata、review artifactの形式を安定させる
+- 外部agentから戻ってきた成功 / 失敗、入力素材、生成結果、レビューをskill改善に戻す
+
+## Phase 8: Team Server
+
+- チーム単位のskill / knowledge / artifact管理を検討する
+- ローカル運用とクラウド運用の境界を設計する
+- 管理者レビュー、権限、監査ログ、検索を設計する
 
 ## 優先順位
 

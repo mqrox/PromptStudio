@@ -9,5 +9,7 @@ Chrome拡張とローカルworkspaceをつなぐ処理を置く場所です。
 - workspaceパスの確認
 - skill / knowledge の読み取り
 - 成果物フォルダーへの保存
-- Antigravity 2.0 IDE への実行依頼
+- Google Antigravity / Antigravity IDE への実行依頼
 - 将来の別実行エンジンへの差し替え境界
+
+長期的には、Chrome拡張専用の橋ではなく、PromptStudio Core を CLI、MCP server、Local API から呼ぶためのローカル境界として整理します。

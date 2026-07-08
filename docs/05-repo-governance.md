@@ -18,6 +18,15 @@ extension/
 bridge/
   Chrome拡張とローカルworkspaceをつなぐ処理
 
+core/
+  PromptStudio Core。skill選択、knowledge参照、prompt package生成、artifact保存形式の中心
+
+cli/
+  promptstudio CLI
+
+mcp/
+  MCP server とtool定義
+
 skills/
   会社共通のプロンプトskill
 
@@ -38,6 +47,7 @@ examples/
 ## 実装方針
 
 - Chrome拡張とローカルブリッジを分離する
+- PromptStudio Core をUIから分離し、Chrome拡張、CLI、MCP server、Local APIから呼べるようにする
 - 保存形式を先に安定させる
 - 特定のAIサービス、IDE、モデルに密結合しない
 - APIキーや個人情報をコミットしない

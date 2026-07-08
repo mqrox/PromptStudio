@@ -6,7 +6,7 @@
 
 - ユーザー向け・運用向けドキュメントは日本語で書く
 - 実装より先に、制作現場で使える責務分離と保存形式を崩さない
-- Chrome拡張、ローカルブリッジ、Antigravity IDE 連携、skill / knowledge は別レイヤーとして扱う
+- Chrome拡張、PromptStudio Core、ローカルブリッジ、Google Antigravity / Antigravity IDE 連携、CLI、MCP server、skill / knowledge は別レイヤーとして扱う
 - 特定のAIモデルやIDEに深く結合しすぎない
 - プロンプトだけでなく、意図、参照情報、設定、レビュー結果まで保存対象として扱う
 
@@ -15,6 +15,9 @@
 - `docs/`: プロダクト設計、運用、意思決定
 - `extension/`: Chrome拡張の実装
 - `bridge/`: Chrome拡張とローカルworkspace / IDEをつなぐ処理
+- `core/`: PromptStudio Core。skill選択、knowledge参照、prompt package生成、artifact保存形式の中心
+- `cli/`: `promptstudio` CLI
+- `mcp/`: MCP server とtool定義
 - `skills/`: 会社共通のプロンプトskill
 - `knowledge/`: 共有コンテキストのサンプルや構造定義
 - `examples/`: 保存される成果物の例

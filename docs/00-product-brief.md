@@ -35,6 +35,8 @@ PromptStudio の本質は、プロンプトを書くツールではない。
 
 初期の実行基盤としては、Google Antigravity / Antigravity IDE を重視する。Googleアカウントで始めやすく、個人向け無料プランから検証でき、Gemini系のマルチモーダル理解、Projects、Skills、Artifacts、agent実行の考え方が PromptStudio の設計と噛み合うためである。ただし、Antigravity専用に固定せず、skill / knowledge / artifact は独立した資産として扱う。
 
+将来的には、Chrome拡張だけでなく、CLI、MCP server、Local API から PromptStudio Core を呼べるようにする。これにより、ChatGPT系環境、Codex、Claude Code、Gemini / Antigravity、社内ツールなど、入口が違っても同じskill、knowledge、artifact、レビューPDCAを使えるようにする。
+
 ## 対象ユーザー
 
 ### 制作スタッフ
