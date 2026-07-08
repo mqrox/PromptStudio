@@ -13,6 +13,9 @@ artifacts/
     conversation.md
     prompt.md
     prompt.json
+    inputs.md
+    result.md
     references.md
+    metadata.json
     review.md
 ```

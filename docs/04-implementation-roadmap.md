@@ -26,6 +26,9 @@
 
 - 画像生成向けの基本skillを作る
 - 動画生成向けの基本skillを作る
+- モデル別skillレジストリを作る
+- GPT Image 2、Nano Banana Pro、Kling 3.0、Seedance 2.0、Runway系などの初期対応候補を定義する
+- 意図とモデルに応じて公式ガイドライン由来skillと社内蓄積skillを呼び分ける
 - ユーザーの依頼を用途別に整理する
 - プロンプト、ネガティブプロンプト、生成設定を出力する
 - 参照したskill / knowledgeを記録する
@@ -33,9 +36,10 @@
 ## Phase 4: 保存とレビュー
 
 - 1相談 = 1成果物フォルダーで保存する
-- `request.md`、`conversation.md`、`prompt.md`、`prompt.json`、`references.md`、`review.md` を生成する
+- `request.md`、`conversation.md`、`prompt.md`、`prompt.json`、`inputs.md`、`result.md`、`references.md`、`metadata.json`、`review.md` を生成する
 - 管理者がレビューしやすい形式に整える
 - レビュー結果からskill改善へ戻す手順を作る
+- 成功 / 失敗、入力画像 / 入力動画、参照素材、生成結果を蓄積する
 
 ## Phase 5: Antigravity 2.0 IDE連携
 
