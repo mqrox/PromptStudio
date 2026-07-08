@@ -446,6 +446,7 @@ artifacts/
 - [docs/09-why-antigravity.md](docs/09-why-antigravity.md): Antigravityを使う理由と確認済み事実
 - [docs/10-agent-hub-mcp-cli.md](docs/10-agent-hub-mcp-cli.md): MCP / CLI / agent hub 構想
 - [docs/11-current-synthesis.md](docs/11-current-synthesis.md): 現状Markdownと原文メモの統合サマリー
+- [docs/12-user-raw-notes.md](docs/12-user-raw-notes.md): ユーザーがチャットに貼ったraw文の一次情報
 
 ## 現時点の設計方針
 

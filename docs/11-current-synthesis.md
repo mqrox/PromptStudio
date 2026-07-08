@@ -4,6 +4,8 @@
 
 この文書は、これまでのユーザー原文メモと、現時点でリポジトリに存在するMarkdownを統合した要約である。
 
+ここでの `raw文` は、ユーザーがチャットに貼った文章そのものを指す。原文は [12-user-raw-notes.md](12-user-raw-notes.md) に一次情報として保存し、この文書ではその原文から読み取れる本質と、既存Markdownで整理済みの内容を統合する。
+
 目的は、PromptStudio が何を解決しようとしているのか、現在どこまで整理されているのか、今後どの方向へ実装していくのかを、経営者、管理者、制作スタッフ、実装者が同じ前提で理解できるようにすること。
 
 ## 一言で言うと
@@ -294,6 +296,8 @@ promptstudio.propose_skill_updates
 - `docs/08-model-skill-registry.md`: モデル別skillの考え方
 - `docs/09-why-antigravity.md`: Antigravityを使う理由とファクトチェック
 - `docs/10-agent-hub-mcp-cli.md`: MCP / CLI / agent hub構想
+- `docs/11-current-synthesis.md`: ユーザー原文と現状Markdownを統合したサマリー
+- `docs/12-user-raw-notes.md`: ユーザーがチャットに貼ったraw文の一次情報
 
 ## 現時点でまだ実装されていないもの
 

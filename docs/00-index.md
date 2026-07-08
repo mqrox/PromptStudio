@@ -16,6 +16,7 @@
 10. [09-why-antigravity.md](09-why-antigravity.md)
 11. [10-agent-hub-mcp-cli.md](10-agent-hub-mcp-cli.md)
 12. [11-current-synthesis.md](11-current-synthesis.md)
+13. [12-user-raw-notes.md](12-user-raw-notes.md)
 
 ## 一文で言うと
 
