@@ -7,7 +7,7 @@
 1. [00-product-brief.md](00-product-brief.md)
 2. [01-mvp-scope.md](01-mvp-scope.md)
 3. [02-architecture-principles.md](02-architecture-principles.md)
-4. [03-prompt-skill-pdca.md](03-prompt-skill-pdca.md)
+4. [03-prompt-skill-improvement-loop.md](03-prompt-skill-improvement-loop.md)
 5. [04-implementation-roadmap.md](04-implementation-roadmap.md)
 6. [05-repo-governance.md](05-repo-governance.md)
 7. [06-decision-log.md](06-decision-log.md)
