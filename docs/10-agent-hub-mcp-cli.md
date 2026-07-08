@@ -58,6 +58,7 @@ Core は、どの入口から呼ばれても同じ判断を行う。
 - モデル別プロンプト、ネガティブ、設定、注意点を出す
 - 成果物保存用のmetadataを作る
 - 成功 / 失敗とレビュー結果を取り込む
+- 蓄積artifactを分析し、管理者向けのskill改善案を作る
 
 ## 呼び出し口
 
@@ -78,6 +79,8 @@ promptstudio plan
 promptstudio prompt
 promptstudio save
 promptstudio review
+promptstudio analyze
+promptstudio propose-skill-updates
 promptstudio skill list
 ```
 
@@ -93,6 +96,8 @@ promptstudio.select_skills
 promptstudio.generate_prompt_package
 promptstudio.save_artifact
 promptstudio.record_review
+promptstudio.analyze_artifacts
+promptstudio.propose_skill_updates
 ```
 
 ### Local API
@@ -102,6 +107,23 @@ Chrome拡張、社内ツール、ローカルworkspaceから呼ぶHTTP/localhost
 ### Team Server
 
 将来的に、チーム単位のskill、knowledge、artifact、レビュー履歴を管理するサーバー。
+
+### 管理者用agent skill
+
+Codex / Claude Code / Gemini / Antigravity から使う、管理者向けのskill群。
+
+目的は、現場スタッフのprompt package生成ではなく、保存されたartifactから共通skillとknowledgeの改善候補を見つけることである。
+
+想定skill。
+
+- artifact-review: artifact単位で依頼、会話、入力素材、prompt、結果、reviewを点検する
+- skill-gap-analysis: 複数artifactの失敗傾向から不足skillを見つける
+- model-skill-maintenance: モデル別skillの更新候補、確認すべき公式情報、再テスト項目を出す
+- review-summary: 管理者向けの週次 / 月次改善レポートを作る
+
+出力には、改善提案、根拠artifact、対象skill / knowledge、影響範囲、confidence、管理者承認が必要であることを含める。
+
+管理者用agent skillは、共通skillを自動で書き換えない。提案、レビュー、承認、反映を分ける。
 
 ## Prompt Package
 
@@ -142,6 +164,14 @@ agentや外部ツールへ返す基本単位を `prompt package` と呼ぶ。
 5. 成功 / 失敗、入力素材、生成結果、レビューをPromptStudioへ戻す
 6. 共通skillが改善される
 
+### 管理者が蓄積artifactを分析する
+
+1. 管理者がCodex / Claude Codeから管理者用skillを起動する
+2. CLIまたはMCP serverが対象期間、モデル、案件、skillを条件にartifactを集める
+3. Core が成功 / 失敗、入力素材、モデル選択、skill呼び出し、reviewを横断分析する
+4. 改善候補、根拠artifact、対象skill、影響範囲、confidenceを返す
+5. 管理者が提案を確認し、必要なskill / knowledgeだけを承認して反映する
+
 ## 設計原則
 
 - Chrome拡張だけにロジックを閉じ込めない
@@ -150,6 +180,7 @@ agentや外部ツールへ返す基本単位を `prompt package` と呼ぶ。
 - 保存形式を先に安定させる
 - 外部agentに渡す情報はprompt packageとして構造化する
 - 成功 / 失敗とレビュー結果をskill改善に戻す
+- 管理者用skillは改善案を出すが、共通skillを自動変更しない
 - Antigravity、Codex、Claude Code、Gemini、ChatGPT系環境のどれか1つに固定しない
 
 ## MVPとの関係

@@ -128,9 +128,41 @@ artifacts/
 
 管理者が保存物をレビューし、品質、再現性、モデル適性、案件適合性、入力素材の妥当性、成功 / 失敗理由を確認する。
 
+蓄積が増えた段階では、Codex、Claude Code、Gemini / Antigravity などから呼べる管理者用skillで、複数artifactを横断分析する。
+
 ### Act
 
 レビュー結果をskill / knowledgeへ反映し、次回以降の出力を改善する。
+
+管理者用skillは、反映候補、根拠artifact、影響範囲、更新対象skill、confidenceを整理する。ただし、共通skillへの反映は管理者が確認してから行う。
+
+## 管理者用skill
+
+PromptStudio では、現場スタッフが使うプロンプト生成skillとは別に、管理者がPDCAを回すためのskillを用意する。
+
+現場スタッフ用skillは、制作意図を整理し、対象モデルに合ったprompt packageを作るためのもの。
+
+管理者用skillは、保存されたartifactを分析し、共通skillとknowledgeを改善するためのもの。
+
+初期候補。
+
+- artifact-review: 保存された成果物を読み、意図、入力素材、モデル選択、skill呼び出し、結果、レビューを点検する
+- skill-gap-analysis: 失敗例やレビューコメントから、不足しているskillや古くなったskillを見つける
+- model-skill-maintenance: 公式ガイドライン、社内検証、失敗傾向をもとにモデル別skillの更新候補を出す
+- review-summary: 週次 / 月次で成功例、失敗例、改善候補を管理者向けに要約する
+
+管理者用skillが出すべきもの。
+
+- 改善提案
+- 根拠となるartifact
+- 失敗 / 成功の傾向
+- 対象skill / knowledge
+- 想定される影響範囲
+- 公式情報の再確認が必要な箇所
+- confidence
+- 管理者承認が必要であること
+
+重要なのは、管理者用skillが共通skillを勝手に書き換えないことである。skill改善は制作品質に直接影響するため、提案、レビュー、承認、反映の流れを分ける。
 
 ## レビュー観点
 

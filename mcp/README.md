@@ -12,6 +12,10 @@ promptstudio.select_skills
 promptstudio.generate_prompt_package
 promptstudio.save_artifact
 promptstudio.record_review
+promptstudio.analyze_artifacts
+promptstudio.propose_skill_updates
 ```
 
 MCP serverは、PromptStudioを「プロンプト前提条件とskillの共通ハブ」として使うための入口です。
+
+管理者向けには、蓄積artifactを分析し、共通skillやモデル別skillの改善候補を出すtoolを提供します。改善案は自動反映せず、管理者レビューと承認を前提にします。

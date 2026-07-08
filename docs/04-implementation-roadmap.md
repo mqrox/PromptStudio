@@ -48,6 +48,15 @@
 - レビュー結果からskill改善へ戻す手順を作る
 - 成功 / 失敗、入力画像 / 入力動画、参照素材、生成結果を蓄積する
 
+## Phase 4.5: 管理者用skill
+
+- Codex / Claude Code から使う管理者用skillの仕様を定義する
+- 蓄積artifactを横断して読む `artifact-review` skillを作る
+- 失敗傾向から不足skillや古いskillを見つける `skill-gap-analysis` skillを作る
+- モデル別skillの更新候補を出す `model-skill-maintenance` skillを作る
+- 週次 / 月次で改善候補をまとめる `review-summary` skillを作る
+- 管理者承認なしに共通skillへ自動反映しない運用を設計する
+
 ## Phase 5: Google Antigravity / Antigravity IDE連携
 
 - Antigravity / Antigravity IDE で扱えるworkspace構造を確認する
@@ -71,6 +80,7 @@
 - Codex、Claude Code、Gemini / Antigravity、ChatGPT系環境から呼ぶ想定toolを定義する
 - agentが受け取るprompt package、metadata、review artifactの形式を安定させる
 - 外部agentから戻ってきた成功 / 失敗、入力素材、生成結果、レビューをskill改善に戻す
+- 管理者用agentが使う `analyze artifacts` と `propose skill updates` のCLI / MCP入口を用意する
 
 ## Phase 8: Team Server
 
